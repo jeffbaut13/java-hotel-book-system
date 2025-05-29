@@ -1,0 +1,36 @@
+version: "3.8"
+
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-hotel
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: hotel_sistema
+    ports:
+      - "3307:3306"
+    volumes:
+      # Persistencia de datos
+      - db_data:/var/lib/mysql
+      # Archivo SQL para cargar datos semilla al iniciar el contenedor
+      - ./docker/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+    networks:
+      - red-hotel
+    restart: always
+
+  app:
+    build: .
+    container_name: hotel-app
+    ports:
+      - "8092:8092"
+    depends_on:
+      - mysql
+    networks:
+      - red-hotel
+    restart: always
+
+volumes:
+  db_data:
+
+networks:
+  red-hotel:
