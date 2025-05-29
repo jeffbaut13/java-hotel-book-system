@@ -8,12 +8,25 @@ Esta guía explica el uso de todos los endpoints disponibles en el sistema backe
 
 ## Importar las colecciones de Postman
 
-## archivo de importacion postamanCollection.json
+archivo de importacion postamanCollection.json
 
-## 1. Crear un Cliente
+A continuación se detallan los endpoints disponibles, organizados por las operaciones que se pueden realizar en el sistema en orden propuesto, sin embargo puede variar el orden y sus usos, dichos endpoints tiene su funcionalidad de get el cual si no hay datos aparecera un array vacio [], muchos dependen de otros para funcionar aun faltaria implementar un sistema de captura de errores, son necesarios, para que el usuario pueda saber si algo salio mal, por ahora se retornara un mensaje de error en caso de que algo falle.
 
-**POST** `/api/clientes`
+## Tabla de Contenidos
 
+# Ejemplo de Uso de la API del Hotel
+
+## Introducción
+
+## 1. Crear un Cliente  
+
+**POST** `/api/clientes` 
+```json
+{
+  "cedula": 1,
+  "nombre": "Juan",
+  "tipoIdentificacion": "CC"
+}
 ```json
 {
   "cedula": 2,
