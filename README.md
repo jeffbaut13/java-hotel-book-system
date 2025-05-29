@@ -10,7 +10,7 @@ Esta guía explica el uso de todos los endpoints disponibles en el sistema backe
 
 ## Importar las colecciones de Postman
 
-archivo de importacion postamanCollection.json
+archivo de importacion /postmanCollection.json (ir a Postman -> Importar -> /Seleccionar archivo -> postmanCollection.json)
 
 ![image](https://github.com/user-attachments/assets/47ae6e46-26d6-4d79-a570-387b793e8397)
 
