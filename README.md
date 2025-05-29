@@ -5,6 +5,8 @@ Esta guía explica el uso de todos los endpoints disponibles en el sistema backe
 ## Validación y documentacion en
 
 `/swagger-ui/index.html#/`
+![image](https://github.com/user-attachments/assets/bc652619-9748-45e4-b2fa-8f5817c3945e)
+
 
 ## Importar las colecciones de Postman
 
