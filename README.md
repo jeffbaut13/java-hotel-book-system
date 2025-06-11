@@ -36,6 +36,7 @@ Puedes crear un solo cliente o varios clientes a la vez. Aquí tienes ejemplos d
   "tipoIdentificacion": "CC"
 }
 ```
+
 **Más clientes:**
 
 ```json
@@ -51,19 +52,7 @@ Puedes crear un solo cliente o varios clientes a la vez. Aquí tienes ejemplos d
     "tipoIdentificacion": "1000000"
   }
 ]
-```json
-{
-  "cedula": 1,
-  "nombre": "Juan",
-  "tipoIdentificacion": "CC"
-},
-{
-  "cedula": 2,
-  "nombre": "Jesus",
-  "tipoIdentificacion": "1000000"
-}
 ```
-
 ---
 
 ## 1.1 Crear una Factura
