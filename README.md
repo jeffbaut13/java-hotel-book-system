@@ -25,6 +25,32 @@ A continuación se detallan los endpoints disponibles, organizados por las opera
 
 **POST** `/api/clientes`
 
+Puedes crear un solo cliente o varios clientes a la vez. Aquí tienes ejemplos de ambos casos:
+
+**Un solo cliente:**
+
+```json
+{
+  "cedula": 1,
+  "nombre": "Juan",
+  "tipoIdentificacion": "CC"
+}
+```
+**Más clientes:**
+
+```json
+[
+  {
+    "cedula": 1,
+    "nombre": "Juan",
+    "tipoIdentificacion": "CC"
+  },
+  {
+    "cedula": 2,
+    "nombre": "Jesus",
+    "tipoIdentificacion": "1000000"
+  }
+]
 ```json
 {
   "cedula": 1,
