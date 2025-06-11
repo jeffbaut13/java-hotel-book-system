@@ -7,13 +7,11 @@ Esta guía explica el uso de todos los endpoints disponibles en el sistema backe
 `/swagger-ui/index.html#/`
 ![image](https://github.com/user-attachments/assets/bc652619-9748-45e4-b2fa-8f5817c3945e)
 
-
 ## Importar las colecciones de Postman
 
 archivo de importacion /postmanCollection.json (ir a Postman -> Importar -> /Seleccionar archivo -> postmanCollection.json)
 
 ![image](https://github.com/user-attachments/assets/47ae6e46-26d6-4d79-a570-387b793e8397)
-
 
 A continuación se detallan los endpoints disponibles, organizados por las operaciones que se pueden realizar en el sistema en orden propuesto, sin embargo puede variar el orden y sus usos, dichos endpoints tiene su funcionalidad de get el cual si no hay datos aparecera un array vacio [], muchos dependen de otros para funcionar aun faltaria implementar un sistema de captura de errores, son necesarios, para que el usuario pueda saber si algo salio mal, por ahora se retornara un mensaje de error en caso de que algo falle.
 
@@ -23,16 +21,16 @@ A continuación se detallan los endpoints disponibles, organizados por las opera
 
 ## Introducción
 
-## 1. Crear un Cliente  
+## 1. Crear un Cliente
 
-**POST** `/api/clientes` 
+**POST** `/api/clientes`
+
 ```json
 {
   "cedula": 1,
   "nombre": "Juan",
   "tipoIdentificacion": "CC"
-}
-```json
+},
 {
   "cedula": 2,
   "nombre": "Jesus",
