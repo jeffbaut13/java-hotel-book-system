@@ -5,3 +5,4 @@ import proyecto.hotel.entidades.*;
 
 public interface HabitacionRepositorio extends JpaRepository<Habitacion, Integer> {
 }
+ 

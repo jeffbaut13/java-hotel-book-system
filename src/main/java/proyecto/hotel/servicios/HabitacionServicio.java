@@ -20,4 +20,13 @@ public class HabitacionServicio {
   public Habitacion guardar(Habitacion obj) {
     return repo.save(obj);
   }
+
+  public Habitacion obtenerPorId(Integer id) {
+    return repo.findById(id).orElseThrow(() -> new RuntimeException("Habitación no encontrada"));
+  }
+
+  public void eliminar(Integer id) {
+    repo.deleteById(id);
+  }
+
 }

@@ -22,4 +22,24 @@ public class HabitacionControlador {
   public Habitacion guardar(@RequestBody Habitacion obj) {
     return servicio.guardar(obj);
   }
+
+  // Obtener habitación por ID (opcional, pero útil para edición)
+  @GetMapping("/{id}")
+  public Habitacion obtenerPorId(@PathVariable Integer id) {
+    return servicio.obtenerPorId(id);
+  }
+
+  // Actualizar habitación existente
+  @PutMapping("/{id}")
+  public Habitacion actualizar(@PathVariable Integer id, @RequestBody Habitacion obj) {
+    obj.setIdHabitacion(id); // asegúrate de que se actualice la habitación correcta
+    return servicio.guardar(obj); // puede usar el mismo método de guardar si es inteligente
+  }
+
+  // Eliminar habitación
+  @DeleteMapping("/{id}")
+  public void eliminar(@PathVariable Integer id) {
+    servicio.eliminar(id);
+  }
+
 }
