@@ -129,8 +129,9 @@ CREATE TABLE cama_habitacion (
   estado VARCHAR(10),
   PRIMARY KEY(id_cama, id_habitacion),
   FOREIGN KEY(id_cama) REFERENCES cama(id_cama),
-  FOREIGN KEY(id_habitacion) REFERENCES habitacion(id_habitacion)
+  FOREIGN KEY(id_habitacion) REFERENCES habitacion(id_habitacion) ON DELETE CASCADE
 ) DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 
 -- Asociación reserva - habitación
 CREATE TABLE reserva_habitacion (
