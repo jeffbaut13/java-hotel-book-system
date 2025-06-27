@@ -175,7 +175,7 @@ Puedes crear un solo cliente o varios clientes a la vez. Aquí tienes ejemplos d
 
 ```json
 {
-  "reciboUrl": "https://example.com/recibo.jpg",
+  "serial": "https://example.com/recibo.jpg",
   "fechaCama": "2025-05-20",
   "categoria": {
     "idCategoriaCama": 1

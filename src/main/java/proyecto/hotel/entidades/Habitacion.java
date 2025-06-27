@@ -13,7 +13,7 @@ public class Habitacion {
 
     private String nombre;
     private Integer piso;
-    private Integer telefono;
+    private String telefono;
 
     @ManyToOne
     @JoinColumn(name = "id_categoria")

@@ -15,8 +15,8 @@ public class Cama {
     @Column(name = "id_cama")
     private Integer id;
 
-    @Column(name = "recibo_url", nullable = false)
-    private String reciboUrl;
+    @Column(name = "serial", nullable = false)
+    private String serial;
 
     @Column(name = "fecha_cama", nullable = false)
     private Date fechaCama;

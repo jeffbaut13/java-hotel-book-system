@@ -70,7 +70,7 @@ CREATE TABLE categoria_cama (
 -- Cama
 CREATE TABLE cama (
   id_cama INT NOT NULL AUTO_INCREMENT,
-  recibo_url VARCHAR(100) NOT NULL,
+  serial VARCHAR(100) NOT NULL,
   fecha_cama DATE NOT NULL,
   id_categoriacama INT NOT NULL,
   PRIMARY KEY(id_cama),
@@ -114,9 +114,9 @@ CREATE TABLE categoria_cama_habitacion (
 -- Habitación
 CREATE TABLE habitacion (
   id_habitacion INT NOT NULL AUTO_INCREMENT,
-  nombre VARCHAR(10),
+  nombre VARCHAR(30),
   piso INT NOT NULL,
-  telefono INT NOT NULL,
+  telefono VARCHAR(30),
   id_categoria INT NOT NULL,
   PRIMARY KEY(id_habitacion),
   FOREIGN KEY(id_categoria) REFERENCES categoria_habitacion(id_categoria_habitacion)
@@ -182,14 +182,14 @@ INSERT INTO reserva_huesped (id_reserva, id_huesped, fecha_reserva) VALUES
 INSERT INTO categoria_cama (tipo, medidas, foto_url, color) VALUES
 ('Queen', '160x200', 'http://img.com/queen.jpg', 'Blanco');
 
-INSERT INTO cama (recibo_url, fecha_cama, id_categoriacama) VALUES
-('http://img.com/recibo.jpg', '2025-05-28', 1);
+INSERT INTO cama (serial, fecha_cama, id_categoriacama) VALUES
+('P1-01', '2025-05-28', 1);
 
 INSERT INTO categoria_habitacion (nombre, precio_noche, foto_url, descripcion, tv, aire_acondicionado, cobertura_noctura, veinticuatro_horas, cafetera, minibar, caja_seguridad, leed_automatizada, servicio_huesped, despertador, portatil, secador, telefono, vista_almar) VALUES
 ('Suite Deluxe', 450000, 'http://img.com/suite.jpg', 'Habitación con vista al mar y todas las comodidades', true, true, true, true, true, true, true, true, true, true, true, true, true, true);
 
 INSERT INTO habitacion (nombre, piso, telefono, id_categoria) VALUES
-('A101', 1, 1234, 1);
+('A101', 1, "3057255248", 1);
 
 INSERT INTO cama_habitacion (id_cama, id_habitacion, estado) VALUES
 (1, 1, 'Libre');
