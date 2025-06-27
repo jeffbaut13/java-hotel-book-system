@@ -32,8 +32,8 @@ public class HabitacionControlador {
   // Actualizar habitación existente
   @PutMapping("/{id}")
   public Habitacion actualizar(@PathVariable Integer id, @RequestBody Habitacion obj) {
-    obj.setIdHabitacion(id); // asegúrate de que se actualice la habitación correcta
-    return servicio.guardar(obj); // puede usar el mismo método de guardar si es inteligente
+    obj.setIdHabitacion(id);
+    return servicio.guardar(obj);
   }
 
   // Eliminar habitación
