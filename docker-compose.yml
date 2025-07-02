@@ -7,12 +7,13 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: hotel_sistema
+      # Solo estas 2 variables adicionales para UTF-8 (las esenciales)
+      MYSQL_CHARACTER_SET_SERVER: utf8mb4
+      MYSQL_COLLATION_SERVER: utf8mb4_unicode_ci
     ports:
       - "3307:3306"
     volumes:
-      # Persistencia de datos
       - db_data:/var/lib/mysql
-      # Archivo SQL para cargar datos semilla al iniciar el contenedor
       - ./docker/mysql/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
     networks:
       - red-hotel
@@ -28,6 +29,9 @@ services:
     networks:
       - red-hotel
     restart: always
+    # Solo esta variable adicional para Java
+    environment:
+      JAVA_TOOL_OPTIONS: "-Dfile.encoding=UTF-8"
 
 volumes:
   db_data:

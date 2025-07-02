@@ -10,16 +10,21 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/cama-habitacion")
 public class CamaHabitacionControlador {
-  @Autowired
-  private CamaHabitacionServicio servicio;
+    @Autowired
+    private CamaHabitacionServicio servicio;
 
-  @GetMapping
-  public List<CamaHabitacion> obtenerTodos() {
-    return servicio.obtenerTodos();
-  }
+    @GetMapping
+    public List<CamaHabitacion> obtenerTodos() {
+        return servicio.obtenerTodos();
+    }
 
-  @PostMapping
-  public CamaHabitacion guardar(@RequestBody CamaHabitacion obj) {
-    return servicio.guardar(obj);
-  }
+    @GetMapping("/habitacion/{idHabitacion}")
+    public List<CamaHabitacion> obtenerPorHabitacion(@PathVariable Integer idHabitacion) {
+        return servicio.obtenerPorHabitacion(idHabitacion);
+    }
+
+    @PostMapping
+    public CamaHabitacion guardar(@RequestBody CamaHabitacion obj) {
+        return servicio.guardar(obj);
+    }
 }
