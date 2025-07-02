@@ -21,6 +21,15 @@ A continuación se detallan los endpoints disponibles, organizados por las opera
 
 ## Introducción
 
+**Reemplazar en application.properties de java los datos de la base de datos local o de produccion**
+
+```properties
+spring.datasource.url=jdbc:mysql://mysql:3306/hotel_sistema?useUnicode=true&characterEncoding=UTF-8
+spring.datasource.username=root
+spring.datasource.password=root
+
+```
+
 ## 1. Crear un Cliente
 
 **POST** `/api/clientes`
@@ -53,6 +62,7 @@ Puedes crear un solo cliente o varios clientes a la vez. Aquí tienes ejemplos d
   }
 ]
 ```
+
 ---
 
 ## 1.1 Crear una Factura
